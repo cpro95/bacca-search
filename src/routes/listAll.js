@@ -3,7 +3,7 @@ import * as deckDB from "../allresult.json";
 import Header from "../components/header";
 import { Link } from "react-router-dom";
 
-const List = () => {
+const ListAll = () => {
   // importing array from files returns Object, your data is Object.default
   let totalDeck = deckDB.default;
   var countedResult = {
@@ -113,4 +113,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default ListAll;
