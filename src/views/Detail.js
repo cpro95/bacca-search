@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/header";
 
 const Detail = props => {
   const detailData = props.location.state;
@@ -36,7 +35,6 @@ const Detail = props => {
 
   return (
     <section>
-      <Header />
 	  <h5>Total Play : {totalCount}</h5>
     <h6>Player : Tie : Banker = {playerWins} : {TieCount} : {BankerWins}</h6>
       <table className="table table-striped">
