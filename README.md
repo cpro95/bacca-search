@@ -1,5 +1,5 @@
-#Search My Movie
-Easily find my movies in KODI-DB.
+#Search My Data
+Easily find my data in my DB.
 
 
 ## Available Scripts
