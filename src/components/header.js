@@ -15,7 +15,7 @@ const Header = () => {
         className="jumbotron jumbotron-fluid"
         style={heroStyle}
       >
-        <div className="container">
+        <div className="container pt-4">
           <h1 className="display-4 text-white">Search Pattern</h1>
           <p className="lead text-white">inside of my DB</p>
         </div>
