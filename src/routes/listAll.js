@@ -76,7 +76,7 @@ const ListAll = () => {
           value={search}
           autoFocus
           onChange={handleChange}
-          placeholder="Search Pattern Using P,B,T, at least 5 inputs required"
+          placeholder="Search Data with P,B,T (at least 5 inputs required)"
         />
       </div>
       <h6>Total : {deck.length}</h6>
