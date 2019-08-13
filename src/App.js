@@ -6,11 +6,11 @@ import About from './routes/about';
 import Detail from './routes/detail';
 
 const App = () => (
-        <Switch>
-            <Route exact path='/' component={ListAll} />
-            <Route path='/about' component={About} />
-            <Route path='/:id' component={Detail} />
-        </Switch>
-)
+    <Switch>
+      <Route exact path="/" component={ListAll} />
+      <Route path="/about" component={About} />
+      <Route path="/:id" component={Detail} />
+    </Switch>
+);
 
 export default App;

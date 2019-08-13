@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./navbar";
 
+
 const Header = () => {
   const heroStyle = {
     opacity: "0.95",

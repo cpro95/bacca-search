@@ -3,6 +3,7 @@ import * as deckDB from "../allresult.json";
 import Header from "../components/header";
 import { Link } from "react-router-dom";
 
+
 const ListAll = () => {
   // importing array from files returns Object, your data is Object.default
   let totalDeck = deckDB.default;
@@ -71,10 +72,10 @@ const ListAll = () => {
           value={search}
           autoFocus
           onChange={handleChange}
-          placeholder="Search Pattern..."
+          placeholder="Search Pattern Using P,B,T"
         />
       </div>
-      <h5>Total : {deck.length}</h5>
+      <h6>Total : {deck.length}</h6>
       {search ? (
         <table className="table table-striped">
           <thead className="thead-dark">
@@ -107,7 +108,7 @@ const ListAll = () => {
           </tbody>
         </table>
       ) : (
-        <h4>Please Search Your Pattern using (P,B,T)</h4>
+        <div></div>
       )}
     </section>
   );
