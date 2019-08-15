@@ -55,11 +55,11 @@ const ListAll = () => {
       });
       if (e.target.value.trim() !== '') {
         setDeck(filteredDeck);
-        var returnedResult = guessNext(
-          filteredDeck,
-          e.target.value.trim().length
-        );
-        setCounted(returnedResult);
+       // var returnedResult = guessNext(
+      //    filteredDeck,
+      //    e.target.value.trim().length
+     //   );
+      //  setCounted(returnedResult);
       } else setDeck(totalDeck);
     }
   };
