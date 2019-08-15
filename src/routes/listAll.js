@@ -98,14 +98,16 @@ const ListAll = () => {
             {deck.map((d, i) => (
               <tr key={i}>
                 <td>
-                  
+                  {d.slice(0,d.indexOf(search))}
+                   <span className="text-white bg-dark">{search}</span>
+                  {d.slice(d.indexOf(search))}
                   <Link
                     to={{
                       pathname: `${i}`,
                       state: d
                     }}
                   >
-                    {d}
+                    link
                   </Link>
                 </td>
               </tr>
