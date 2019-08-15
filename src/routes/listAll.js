@@ -49,17 +49,17 @@ const ListAll = () => {
     if (e.target.value.trim().length >= leastSearchNumber) {
       var filteredDeck = totalDeck.filter(dd => {
         // startsWith function return true or false
-        if (dd.toUpperCase().includes(e.target.value.toUpperCase()))
+        if (dd.toUpperCase().startsWith(e.target.value.toUpperCase()))
           return true;
         else return false;
       });
       if (e.target.value.trim() !== '') {
         setDeck(filteredDeck);
-       // var returnedResult = guessNext(
-      //    filteredDeck,
-      //    e.target.value.trim().length
-     //   );
-      //  setCounted(returnedResult);
+        var returnedResult = guessNext(
+        filteredDeck,
+         e.target.value.trim().length
+        );
+        setCounted(returnedResult);
       } else setDeck(totalDeck);
     }
   };
