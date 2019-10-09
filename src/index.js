@@ -6,7 +6,7 @@ import { setCurrentUser, logoutUser } from './actions/authActions';
 import { Provider } from 'react-redux';
 import store from './store';
 import App from './components/App';
-import './index.css';
+// import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 // Check for token to keep user logged in

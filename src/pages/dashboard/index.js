@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Row, Col, Typography, Card, Spin } from 'antd';
-import axios from 'axios';
+// import axios from 'axios';
 
 export default function Dashboard(props) {
   const { Title } = Typography;
@@ -11,73 +11,81 @@ export default function Dashboard(props) {
   const [startB, setStartB] = useState(0);
   const [startT, setStartT] = useState(0);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
+  // overhead for loading 4 fetch
+  setTotal(40000);
+  setStartP(17988);
+  setStartB(18165);
+  setStartT(3847);
+  setIsLoading(false);
 
-      try {
-        const result = await axios.get('https://cpro95.asuscomm.com:2368/api/bacca/list');
-        setTotal(Number(result.data));
-      } catch (error) {
-        console.log(error);
-      }
+  // temporially shut down fetch
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     setIsLoading(true);
 
-      setIsLoading(false);
-    };
+  //     try {
+  //       const result = await axios.get('https://cpro95.asuscomm.com:2368/api/bacca/list');
+  //       setTotal(Number(result.data));
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
 
-    fetchData();
-  }, []);
+  //     setIsLoading(false);
+  //   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
+  //   fetchData();
+  // }, []);
 
-      try {
-        const result = await axios.get('https://cpro95.asuscomm.com:2368/api/bacca/list/P');
-        setStartP(Number(result.data.length));
-      } catch (error) {
-        console.log(error);
-      }
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     setIsLoading(true);
 
-      setIsLoading(false);
-    };
+  //     try {
+  //       const result = await axios.get('https://cpro95.asuscomm.com:2368/api/bacca/list/P');
+  //       setStartP(Number(result.data.length));
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
 
-    fetchData();
-  }, []);
+  //     setIsLoading(false);
+  //   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
+  //   fetchData();
+  // }, []);
 
-      try {
-        const result = await axios.get('https://cpro95.asuscomm.com:2368/api/bacca/list/B');
-        setStartB(Number(result.data.length));
-      } catch (error) {
-        console.log(error);
-      }
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     setIsLoading(true);
 
-      setIsLoading(false);
-    };
+  //     try {
+  //       const result = await axios.get('https://cpro95.asuscomm.com:2368/api/bacca/list/B');
+  //       setStartB(Number(result.data.length));
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
 
-    fetchData();
-  }, []);
+  //     setIsLoading(false);
+  //   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
+  //   fetchData();
+  // }, []);
 
-      try {
-        const result = await axios.get('https://cpro95.asuscomm.com:2368/api/bacca/list/T');
-        setStartT(Number(result.data.length));
-      } catch (error) {
-        console.log(error);
-      }
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     setIsLoading(true);
 
-      setIsLoading(false);
-    };
+  //     try {
+  //       const result = await axios.get('https://cpro95.asuscomm.com:2368/api/bacca/list/T');
+  //       setStartT(Number(result.data.length));
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
 
-    fetchData();
-  }, []);
+  //     setIsLoading(false);
+  //   };
+
+  //   fetchData();
+  // }, []);
 
   return (
     <>
@@ -87,20 +95,20 @@ export default function Dashboard(props) {
         <Spin size="large" />
       ) : (
         <div>
-          <Title level={2}>Total -{total.toLocaleString()}</Title>
+          <Title level={2}>Total - {total.toLocaleString()}</Title>
           <Row gutter={16}>
             <Col span={8}>
-              <Card title="Start with P" bordered={false}>
+              <Card title="P" bordered={false}>
                 {startP.toLocaleString()}
               </Card>
             </Col>
             <Col span={8}>
-              <Card title="Start with B" bordered={false}>
+              <Card title="B" bordered={false}>
                 {startB.toLocaleString()}
               </Card>
             </Col>
             <Col span={8}>
-              <Card title="Start with T" bordered={false}>
+              <Card title="T" bordered={false}>
                 {startT.toLocaleString()}
               </Card>
             </Col>
