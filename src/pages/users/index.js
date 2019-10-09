@@ -14,7 +14,7 @@ export default function Users() {
       setIsLoading(true);
 
       try {
-        const result = await axios.get('http://cpro95.asuscomm.com:2368/api/users/list');
+        const result = await axios.get('https://cpro95.asuscomm.com:2368/api/users/list');
         setData(result.data);
       } catch (error) {
         console.log(error);
@@ -29,7 +29,7 @@ export default function Users() {
       setIsLoading(true);
 
       try {
-        await axios.delete('http://cpro95.asuscomm.com:2368/api/users/list/' + id);
+        await axios.delete('https://cpro95.asuscomm.com:2368/api/users/list/' + id);
         setEdited(!edited);
       } catch (error) {
         console.log(error);
@@ -46,7 +46,7 @@ export default function Users() {
       setIsLoading(true);
 
       try {
-        await axios.put('http://cpro95.asuscomm.com:2368/api/users/list/' + id, { activated: activate });
+        await axios.put('https://cpro95.asuscomm.com:2368/api/users/list/' + id, { activated: activate });
         setEdited(!edited);
       } catch (error) {
         console.log(error);
@@ -63,7 +63,7 @@ export default function Users() {
       setIsLoading(true);
 
       try {
-        await axios.put('http://cpro95.asuscomm.com:2368/api/users/list/' + id, { role: role });
+        await axios.put('https://cpro95.asuscomm.com:2368/api/users/list/' + id, { role: role });
         setEdited(!edited);
       } catch (error) {
         console.log(error);

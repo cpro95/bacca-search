@@ -1,5 +1,5 @@
 {
-  "name": "antd-demo",
+  "name": "react-amdin",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -28,6 +28,7 @@
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"
   },
+  "proxy": "https://cpro95.asuscomm.com:2368",
   "eslintConfig": {
     "extends": "react-app"
   },

@@ -8,7 +8,7 @@ import './bacca.css';
 export default function Bacca() {
   const [search, setSearch] = useState('');
   const [data, setData] = useState([]);
-  const [url, setUrl] = useState('http://cpro95.asuscomm.com:2368/api/bacca/list');
+  const [url, setUrl] = useState('https://cpro95.asuscomm.com:2368/api/bacca/list');
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function Bacca() {
 
   const handleSubmit = (value, e) => {
     if (value.length > 9) {
-      setUrl(`http://cpro95.asuscomm.com:2368/api/bacca/list/${value.trim().toUpperCase()}`);
+      setUrl(`https://cpro95.asuscomm.com:2368/api/bacca/list/${value.trim().toUpperCase()}`);
     }
     e.preventDefault();
   };
