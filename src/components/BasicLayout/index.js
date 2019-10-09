@@ -26,7 +26,7 @@ function BasicLayout(props) {
           type="primary"
           onClick={() => dispatch({ type: SHOW_SIDEBAR })}
         >
-          React Admin
+          Menu
         </Button>
         <Drawer
           title="React Admin"
