@@ -16,7 +16,7 @@ export default function Dashboard(props) {
       setIsLoading(true);
 
       try {
-        const result = await axios.get('/api/bacca/list');
+        const result = await axios.get('http://cpro95.asuscomm.com:2368/api/bacca/list');
         setTotal(Number(result.data));
       } catch (error) {
         console.log(error);
@@ -33,7 +33,7 @@ export default function Dashboard(props) {
       setIsLoading(true);
 
       try {
-        const result = await axios.get('/api/bacca/list/P');
+        const result = await axios.get('http://cpro95.asuscomm.com:2368/api/bacca/list/P');
         setStartP(Number(result.data.length));
       } catch (error) {
         console.log(error);
@@ -50,7 +50,7 @@ export default function Dashboard(props) {
       setIsLoading(true);
 
       try {
-        const result = await axios.get('/api/bacca/list/B');
+        const result = await axios.get('http://cpro95.asuscomm.com:2368/api/bacca/list/B');
         setStartB(Number(result.data.length));
       } catch (error) {
         console.log(error);
@@ -67,7 +67,7 @@ export default function Dashboard(props) {
       setIsLoading(true);
 
       try {
-        const result = await axios.get('/api/bacca/list/T');
+        const result = await axios.get('http://cpro95.asuscomm.com:2368/api/bacca/list/T');
         setStartT(Number(result.data.length));
       } catch (error) {
         console.log(error);
