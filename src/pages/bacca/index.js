@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Typography, Row, Spin, Input, Table } from 'antd';
+import { Typography, Row, Spin, Input, Table, Badge } from 'antd';
 import axios from 'axios';
 
 // styles
@@ -8,7 +8,9 @@ import './bacca.css';
 export default function Bacca() {
   const [search, setSearch] = useState('');
   const [data, setData] = useState([]);
-  const [url, setUrl] = useState('https://cpro95.asuscomm.com:2368/api/bacca/list');
+  const [url, setUrl] = useState(
+    'https://cpro95.asuscomm.com:2368/api/bacca/list'
+  );
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -38,7 +40,11 @@ export default function Bacca() {
 
   const handleSubmit = (value, e) => {
     if (value.length > 9) {
-      setUrl(`https://cpro95.asuscomm.com:2368/api/bacca/list/${value.trim().toUpperCase()}`);
+      setUrl(
+        `https://cpro95.asuscomm.com:2368/api/bacca/list/${value
+          .trim()
+          .toUpperCase()}`
+      );
     }
     e.preventDefault();
   };
@@ -53,7 +59,36 @@ export default function Bacca() {
     {
       title: 'RESULT',
       dataIndex: 'result',
-      key: 'result'
+      key: 'result',
+      render: (text, record, index) => {
+        // if data are total, do not render, just print total
+        if (data[0].number === '') {
+          // console.log('data is not number');
+          return <div>{data[0].result}</div>;
+        } else {
+          if (search === text.slice(0, search.length)) {
+            // console.log('equal');
+            console.log(text.slice(0, search.length));
+            const newText = text.slice(search.length);
+            return (
+              <div>
+                <span style={{ fontWeight: 'bold', color: 'blue' }}>
+                  <Badge offset={[-8, -8]} count={search.length}>
+                    {search}
+                  </Badge>
+                </span>
+                <span>{newText}</span>
+              </div>
+            );
+          } else {
+            return (
+              <div>
+                <span>{text}</span>
+              </div>
+            );
+          }
+        }
+      }
     }
   ];
 
