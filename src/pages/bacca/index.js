@@ -50,12 +50,12 @@ export default function Bacca() {
   };
 
   const columns = [
-    {
-      title: 'NUMBER',
-      dataIndex: 'number',
-      key: 'number',
-      sorter: (a, b) => a.number.length - b.number.length
-    },
+    // {
+    //   title: 'NUMBER',
+    //   dataIndex: 'number',
+    //   key: 'number',
+    //   sorter: (a, b) => a.number.length - b.number.length
+    // },
     {
       title: 'RESULT',
       dataIndex: 'result',
@@ -68,7 +68,7 @@ export default function Bacca() {
         } else {
           if (search === text.slice(0, search.length)) {
             // console.log('equal');
-            console.log(text.slice(0, search.length));
+            // console.log(text.slice(0, search.length));
             const newText = text.slice(search.length);
             return (
               <div>

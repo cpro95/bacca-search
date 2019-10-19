@@ -18,10 +18,10 @@ export default function Dashboard(props) {
   // setStartT(3847);
   // setIsLoading(false);
   const isLoading = false;
-  const total = 40000;
-  const startP = 17988;
-  const startB = 18165;
-  const startT = 3847;
+  const total = 1400000;
+  const startP = 624704;
+  const startB = 641800;
+  const startT = 133496;
 
   // temporially shut down fetch
   // useEffect(() => {
